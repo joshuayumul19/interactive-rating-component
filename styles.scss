@@ -1,0 +1,130 @@
+$orange: rgb(251, 116, 19);
+$white: hsl(0, 0, 100);
+$lightGrey: rgb(149, 158, 172);
+$mediumGrey: rgb(124, 135, 152);
+$darkGrey: rgb(30, 37, 47);
+$darkBlue: rgb(40, 47, 57);
+$veryDarkBlue: rgb(18, 20, 23);
+$font: 'Overpass';
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Overpass';
+}
+
+body {
+    background-color: $veryDarkBlue;
+    overflow: hidden;
+}
+
+main {
+    //The Rating Card Container
+    width: 400px;
+    margin: 300px auto;
+    background-color: $darkGrey;
+    border-radius: 30px;
+}
+
+#rating-start {
+    // Rating Starts
+    padding: 5%;
+
+    &>* {
+        margin-bottom: 20px;
+    }
+
+    &>img {
+        padding: 2%;
+        border-radius: 50%;
+        background-color: $darkBlue;
+    }
+
+    &>h1 {
+        //How Did we Do Text
+        color: $white;
+    }
+
+    &>p {
+        // Appreciation Text 
+        color: $mediumGrey;
+        font-size: 15px;
+    }
+}
+
+.rating-buttons {
+    display: flex;
+    justify-content: space-between;
+
+    &>button {
+        //Buttons 1-5
+        border-radius: 50%;
+        width: 50px;
+        padding: 15px;
+        color: $lightGrey;
+        background-color: $darkBlue;
+        border: none;
+    }
+
+    &>:hover {
+        background-color: $lightGrey;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+#submit-button {
+    display: block;
+    margin: 30px auto 0 auto;
+    width: 100%;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: $orange;
+    color: $white;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: $font;
+
+    &:hover {
+        background-color: $white;
+        color: $orange;
+        cursor: pointer;
+    }
+}
+
+#rating-end {
+    //Displaying of Thankyou Message
+    padding: 5%;
+    text-align: center;
+    display: none;
+
+    &>img {
+        display: block;
+        margin: 25px auto;
+    }
+
+    &>span {
+        // You Selected __ out of 5 Text
+        color: $orange;
+        border-radius: 25px;
+        background-color: $darkBlue;
+        font-size: 15px;
+        padding: 5px 20px;
+    }
+
+    &>h1 {
+        // Thankyou Text
+        color: $white;
+        margin-top: 35px;
+    }
+
+    &>p {
+        // Appreciation Text
+        color: $lightGrey;
+        margin: 15px 0 25px 0;
+    }
+}
